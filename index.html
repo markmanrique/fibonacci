@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title> Fibonacci Sequence </title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body >
+	<div class="t1">
+		<h1>FIBONACCI</h1> <h2>SEQUENCE</h2>
+	</div>
+
+
+<div class="frm">
+	<p class="ent">Enter Number of Sequence : </p>
+		
+
+			<input  type="text"  id="txt" placeholder="Positive Numbers Only..."/>
+			<input type="button" class="btn" value='ENTER' onclick=fibo() />
+		
+</div>
+	
+
+<p class="otpt" id="fib"> <p>
+
+<script type="text/javascript">
+	
+	function fibo()
+	{
+		
+		var sum, range, firstNumber = 0, secondNumber = 1, nextNumber = 0;
+		
+		var output = '';
+		
+		range=document.getElementById("txt").value;
+
+		output += firstNumber + " " + secondNumber + " ";
+	
+		for(sum = firstNumber + secondNumber; sum <= range; sum = firstNumber + secondNumber)
+		{
+			output += sum + " ";
+			firstNumber = secondNumber;
+			secondNumber = sum;
+			
+		}
+		
+		document.getElementById('fib').innerHTML = output;
+	
+	}
+</script>   
+
+</body>
+</html>
